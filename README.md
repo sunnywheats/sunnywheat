@@ -1,2 +1,2 @@
 # sunnywheat
-html blog 
+html Jekyll blog 
