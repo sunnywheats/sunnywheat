@@ -19,25 +19,43 @@ function display () {
 $(document).ready(function () {
 	var tabContainer = $(".posts-tabs");
 	if (tabContainer.length) {
+		$(".tab-three").bind("click", showTabthree);
 		$(".tab-two").bind("click", showTabTwo);
 		$(".tab-one").bind("click", showTabOne);
 	}
 	function showTabOne () {
 		$(".tab-one").addClass("active");
+		$(".tab-one-list").removeClass("tab-hidden");	
+		$(".page-holder-one").removeClass("tab-hidden");			
 		$(".tab-two").removeClass("active");
 		$(".tab-two-list").addClass("tab-hidden");
-		$(".tab-one-list").removeClass("tab-hidden");
 		$(".page-holder-two").addClass("tab-hidden");
-		$(".page-holder-one").removeClass("tab-hidden");
+		$(".tab-three").removeClass("active");
+		$(".tab-three-list").addClass("tab-hidden");
+		$(".page-holder-three").addClass("tab-hidden");				
 	}
 	function showTabTwo () {
 		$(".tab-two").addClass("active");
+		$(".tab-two-list").removeClass("tab-hidden");	
+		$(".page-holder-two").removeClass("tab-hidden");			
 		$(".tab-one").removeClass("active");
 		$(".tab-one-list").addClass("tab-hidden");
-		$(".tab-two-list").removeClass("tab-hidden");
 		$(".page-holder-one").addClass("tab-hidden");
-		$(".page-holder-two").removeClass("tab-hidden");
+		$(".tab-three").removeClass("active");
+		$(".tab-three-list").addClass("tab-hidden");
+		$(".page-holder-three").addClass("tab-hidden");			
 	}
+	function showTabthree () {
+		$(".tab-three").addClass("active");
+		$(".tab-three-list").removeClass("tab-hidden");
+		$(".page-holder-three").removeClass("tab-hidden");
+		$(".tab-one").removeClass("active");
+		$(".tab-one-list").addClass("tab-hidden");
+		$(".page-holder-one").addClass("tab-hidden");		
+		$(".tab-two").removeClass("active");		
+		$(".tab-two-list").addClass("tab-hidden");
+		$(".page-holder-two").addClass("tab-hidden");		
+	}	
 })
 
 /*
@@ -67,4 +85,15 @@ $(function(){
       endRange     : 1,
       direction    : "auto"
   });
+  $("div.page-holder-three").jPages({
+      containerID  : "pag-itemContainer-three",
+      previous: "«",
+      next: "»",
+      perPage      : 5,  /* num of items per page */
+      startPage    : 1,
+      startRange   : 1,
+      midRange     : 4,
+      endRange     : 1,
+      direction    : "auto"
+  });  
 });
