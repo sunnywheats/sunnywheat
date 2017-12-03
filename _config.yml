@@ -64,7 +64,7 @@ linkedin:           sunnywheat
 #behance:           username
 
 # Gems
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
